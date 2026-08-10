@@ -1,10 +1,3 @@
-name: PureAgile Test Pipeline
-
-on:
-  workflow_dispatch:   # lets you run it manually from the Actions tab
-  push:
-    branches: [main]
-
 jobs:
   compile:
     name: Compile
@@ -12,38 +5,43 @@ jobs:
     steps:
       - run: echo "compiling"
 
+  prepare_workspace:
+    name: Prepare Workspace
+    runs-on: ubuntu-latest       # deliberately NO needs — see note below
+    steps:
+      - run: echo "preparing"
+
   security_scan:
     name: Security Scan
+    needs: compile
     runs-on: ubuntu-latest
     steps:
       - run: echo "scanning"
 
   docker_build:
     name: Docker Build
+    needs: security_scan
     runs-on: ubuntu-latest
     steps:
       - run: echo "building image"
 
   unit_tests:
     name: Unit Tests
+    needs: docker_build
     runs-on: ubuntu-latest
     steps:
       - run: echo "running unit tests"
 
-  smoke_tests:
-    name: Smoke Tests
-    runs-on: ubuntu-latest
-    steps:
-      - run: exit 1          # fails on purpose
-
   deploy_production:
     name: Deploy Production
+    needs: unit_tests
     runs-on: ubuntu-latest
     steps:
       - run: echo "deploying"
 
-  prepare_workspace:
-    name: Prepare Workspace   # deliberately unclassifiable
+  smoke_tests:
+    name: Smoke Tests
+    needs: deploy_production      # must be last: nothing depends on it
     runs-on: ubuntu-latest
     steps:
-      - run: echo "preparing"
+      - run: exit 1
