@@ -1,1 +1,148 @@
-Testing CICD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexora – The Future of Productivity</title>
+  <style>
+    :root {
+      --primary: #1e293b;
+      --secondary: #334155;
+      --accent: #38bdf8;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--primary);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    header.hero {
+      text-align: center;
+      padding: 4rem 0 3rem 0;
+      background: var(--secondary);
+      border-radius: 0 0 2rem 2rem;
+      box-shadow: 0 4px 24px 0 rgba(30,41,59,0.2);
+    }
+    .hero-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: -1px;
+    }
+    .hero-tagline {
+      font-size: 1.3rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+    .cta-btn {
+      background: var(--accent);
+      color: var(--primary);
+      border: none;
+      border-radius: 2rem;
+      padding: 0.9rem 2.2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px 0 rgba(56,189,248,0.15);
+    }
+    .cta-btn:hover, .cta-btn:focus {
+      background: #0ea5e9;
+      outline: none;
+    }
+    section.features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      margin: 3.5rem 0 2.5rem 0;
+    }
+    .feature {
+      background: #222b3a;
+      border-radius: 1rem;
+      flex: 1 1 250px;
+      min-width: 220px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 2px 12px 0 rgba(30,41,59,0.10);
+      margin: 0 auto;
+      max-width: 290px;
+      text-align: center;
+    }
+    .feature-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+      color: var(--accent);
+    }
+    .feature-desc {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 0 1rem 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    @media (max-width: 700px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      section.features {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .feature {
+        max-width: 100%;
+        padding: 1.5rem 1rem;
+      }
+    }
+    @media (max-width: 400px) {
+      .hero-title {
+        font-size: 1.3rem;
+      }
+      .hero-tagline {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="hero-title">Nexora</div>
+      <div class="hero-tagline">Empower your workflow. Accelerate your future.</div>
+      <button class="cta-btn">Get Started</button>
+    </div>
+  </header>
+  <main>
+    <section class="features container">
+      <div class="feature">
+        <div class="feature-title">Seamless Collaboration</div>
+        <div class="feature-desc">Work together in real-time, share ideas, and keep everyone in sync—no matter where you are.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">Smart Automation</div>
+        <div class="feature-desc">Automate repetitive tasks and focus on what matters most. Nexora adapts to your workflow.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">Insightful Analytics</div>
+        <div class="feature-desc">Gain actionable insights with powerful analytics designed to help you grow and succeed.</div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2024 Nexora. All rights reserved.
+  </footer>
+</body>
+</html>
