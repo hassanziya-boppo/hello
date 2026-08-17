@@ -1,1 +1,163 @@
-Testing CICD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexora – The Future of Productivity</title>
+  <style>
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --button: #e94560;
+      --button-hover: #ff2e63;
+      --text: #f5f6fa;
+      --muted: #a7a9be;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--primary);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      padding: 2.5rem 1rem 2rem 1rem;
+      background: var(--secondary);
+      text-align: center;
+    }
+    .hero-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: 2px;
+    }
+    .hero-tagline {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+    .cta-btn {
+      background: var(--button);
+      color: var(--text);
+      border: none;
+      border-radius: 2rem;
+      padding: 0.9rem 2.2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      box-shadow: 0 2px 12px 0 rgba(233,69,96,0.15);
+    }
+    .cta-btn:hover, .cta-btn:focus {
+      background: var(--button-hover);
+      outline: none;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem 3rem 1rem;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+      width: 100%;
+      max-width: 900px;
+    }
+    .feature {
+      background: var(--secondary);
+      border-radius: 1.2rem;
+      box-shadow: 0 2px 16px 0 rgba(22,33,62,0.12);
+      padding: 2rem 1.5rem;
+      flex: 1 1 250px;
+      min-width: 220px;
+      max-width: 300px;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .feature-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+      color: var(--text);
+    }
+    .feature-desc {
+      font-size: 1rem;
+      color: var(--muted);
+    }
+    footer {
+      background: var(--accent);
+      color: var(--muted);
+      text-align: center;
+      padding: 1.2rem 1rem 1rem 1rem;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 700px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      .features {
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: stretch;
+      }
+      .feature {
+        max-width: 100%;
+      }
+    }
+    @media (max-width: 400px) {
+      .hero-title {
+        font-size: 1.3rem;
+      }
+      .hero-tagline {
+        font-size: 1rem;
+      }
+      .cta-btn {
+        font-size: 0.95rem;
+        padding: 0.7rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero-title">Nexora</div>
+    <div class="hero-tagline">Empower your workflow. Accelerate your future.</div>
+    <button class="cta-btn">Get Started</button>
+  </header>
+  <main>
+    <section class="features">
+      <div class="feature">
+        <div class="feature-title">Seamless Collaboration</div>
+        <div class="feature-desc">Work together in real time, wherever you are. Nexora brings your team closer with instant updates and shared workspaces.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">Smart Automation</div>
+        <div class="feature-desc">Automate repetitive tasks and focus on what matters. Nexora’s intelligent workflows save you hours every week.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">Insightful Analytics</div>
+        <div class="feature-desc">Track progress and make data-driven decisions with beautiful, actionable reports built right in.</div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2024 Nexora. All rights reserved.
+  </footer>
+</body>
+</html>
