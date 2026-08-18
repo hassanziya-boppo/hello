@@ -1,1 +1,187 @@
-Testing CICD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexora – The Future of Productivity</title>
+  <style>
+    :root {
+      --bg: #181c24;
+      --bg-alt: #232837;
+      --primary: #5ad1e6;
+      --accent: #e65a9e;
+      --text: #f4f4f4;
+      --text-muted: #b0b6c1;
+      --footer-bg: #151820;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.25);
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .hero {
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 64px 16px 32px 16px;
+      background: var(--bg-alt);
+      box-shadow: var(--shadow);
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+    .hero-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+      color: var(--primary);
+      text-shadow: 0 2px 8px rgba(90,209,230,0.08);
+    }
+    .hero-tagline {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      text-align: center;
+      max-width: 500px;
+    }
+    .cta-btn {
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      padding: 16px 40px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 12px rgba(90,209,230,0.15);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .cta-btn:hover {
+      background: linear-gradient(90deg, var(--accent), var(--primary));
+      transform: translateY(-2px) scale(1.03);
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+      padding: 48px 16px;
+      background: var(--bg);
+    }
+    .feature {
+      background: var(--bg-alt);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 32px 24px;
+      max-width: 320px;
+      min-width: 240px;
+      flex: 1 1 240px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .feature:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 8px 32px rgba(90,209,230,0.10);
+    }
+    .feature-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .feature-desc {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    footer {
+      background: var(--footer-bg);
+      color: var(--text-muted);
+      text-align: center;
+      padding: 20px 10px 16px 10px;
+      font-size: 0.98rem;
+      border-radius: var(--radius) var(--radius) 0 0;
+      margin-top: auto;
+    }
+    @media (max-width: 800px) {
+      .features {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 32px 8px;
+      }
+      .feature {
+        max-width: 100%;
+        width: 100%;
+      }
+      .hero {
+        padding: 48px 8px 24px 8px;
+      }
+      .hero-title {
+        font-size: 2rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 1.4rem;
+      }
+      .hero-tagline {
+        font-size: 1rem;
+      }
+      .cta-btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+      }
+      .features {
+        padding: 20px 2px;
+      }
+      .feature {
+        padding: 20px 10px;
+      }
+      footer {
+        font-size: 0.92rem;
+        padding: 14px 2px 10px 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-title">Nexora</div>
+    <div class="hero-tagline">Empower your workflow. Unlock your potential. Welcome to the future of productivity.</div>
+    <button class="cta-btn">Get Started</button>
+  </section>
+  <section class="features">
+    <div class="feature">
+      <div class="feature-title">Seamless Collaboration</div>
+      <div class="feature-desc">Work together in real time, share ideas instantly, and keep everyone in sync—no matter where you are.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-title">Smart Automation</div>
+      <div class="feature-desc">Automate repetitive tasks with Nexora’s intelligent workflows, so you can focus on what matters most.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-title">Insightful Analytics</div>
+      <div class="feature-desc">Gain actionable insights with beautiful dashboards and reports that help you make smarter decisions, faster.</div>
+    </div>
+  </section>
+  <footer>
+    &copy; 2024 Nexora. All rights reserved.
+  </footer>
+</body>
+</html>
