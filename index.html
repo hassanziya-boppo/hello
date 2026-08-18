@@ -118,6 +118,28 @@
       border-radius: var(--radius) var(--radius) 0 0;
       margin-top: auto;
     }
+    .footer-main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+    .footer-link {
+      color: var(--text-muted);
+      text-decoration: underline;
+      margin: 0 2px;
+      transition: color 0.15s;
+    }
+    .footer-link:hover {
+      color: var(--primary);
+    }
+    .footer-tagline {
+      font-size: 0.93em;
+      color: var(--text-muted);
+      opacity: 0.85;
+    }
     @media (max-width: 800px) {
       .features {
         flex-direction: column;
@@ -181,7 +203,12 @@
     </div>
   </section>
   <footer>
-    &copy; 2024 Nexora. All rights reserved.
+    <div class="footer-main">
+      &copy; 2026 Nexora
+      <a href="#privacy" class="footer-link">Privacy</a>
+      <a href="mailto:hello@nexora.example" class="footer-link">Contact</a>
+    </div>
+    <div class="footer-tagline">Built for teams who ship.</div>
   </footer>
 </body>
 </html>
