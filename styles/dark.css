@@ -1,0 +1,17 @@
+/* Dark mode overrides for Nexora landing page */
+
+[data-theme="dark"] {
+  --bg: #101217;
+  --bg-alt: #181c24;
+  --primary: #5ad1e6;
+  --accent: #e65a9e;
+  --text: #e0e0e0;
+  --text-muted: #8a8f99;
+  --footer-bg: #0d0f13;
+}
+
+[data-theme="dark"] body,
+[data-theme="dark"] html {
+  background: var(--bg);
+  color: var(--text);
+}
