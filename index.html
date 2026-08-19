@@ -213,8 +213,18 @@
     </div>
   </section>
   <footer>
+    <form id="newsletter-form" style="max-width:400px;margin:0 auto 18px auto;display:flex;flex-direction:column;align-items:center;gap:10px;" autocomplete="off" novalidate>
+      <label for="newsletter-email" style="font-size:1.08rem;color:var(--text-muted);margin-bottom:2px;">Sign up for our newsletter</label>
+      <div style="display:flex;width:100%;gap:8px;">
+        <input id="newsletter-email" name="email" type="email" required placeholder="Your email address" style="flex:1;padding:10px 12px;border-radius:6px;border:1px solid #444;background:var(--bg-alt);color:var(--text);font-size:1rem;outline:none;transition:border 0.15s;" />
+        <button type="submit" style="background:linear-gradient(90deg,var(--primary),var(--accent));color:#fff;border:none;border-radius:6px;padding:10px 22px;font-size:1rem;font-weight:600;cursor:pointer;transition:background 0.2s;">Subscribe</button>
+      </div>
+      <span id="newsletter-error" style="color:var(--accent);font-size:0.98rem;display:none;margin-top:2px;"></span>
+    </form>
+    <div id="newsletter-confirmation" style="display:none;font-size:1.08rem;color:var(--primary);margin-bottom:18px;">Thank you for subscribing!</div>
     &copy; 2024 Nexora. All rights reserved.
   </footer>
+  <script src="scripts/newsletter.js"></script>
   <script src="scripts/theme.js"></script>
 </body>
 </html>
