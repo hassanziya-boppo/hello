@@ -20,9 +20,25 @@
       input.setAttribute('aria-invalid', 'true');
       return;
     }
-    // Simulate success (no backend)
-    form.style.display = 'none';
-    confirmation.style.display = 'block';
+    // Try to deliver email to local dev server
+    fetch('http://localhost:3001/api/newsletter-signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+    })
+    .then(function(response) {
+      if (!response.ok) return response.json().then(function(data) { throw data; });
+      return response.json();
+    })
+    .then(function(data) {
+      form.style.display = 'none';
+      confirmation.style.display = 'block';
+    })
+    .catch(function(err) {
+      error.textContent = (err && err.error) ? err.error : 'Failed to record your email. Please try again.';
+      error.style.display = 'block';
+      input.setAttribute('aria-invalid', 'true');
+    });
   });
 
   input.addEventListener('input', function() {
