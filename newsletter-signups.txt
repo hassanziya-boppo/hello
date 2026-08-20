@@ -1,0 +1,2 @@
+# Newsletter signups
+# One email per line, most recent last
