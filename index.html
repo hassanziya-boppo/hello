@@ -182,6 +182,43 @@
       .announcement-bar a:hover {
         color: var(--accent);
       }
+      .back-to-top-btn {
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+        color: #fff;
+        border: none;
+        border-radius: var(--radius);
+        padding: 12px 18px;
+        font-family: 'Segoe UI', 'Arial', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(12px);
+        transition: opacity 0.2s, transform 0.2s, visibility 0.2s, background 0.2s;
+        z-index: 200;
+      }
+      .back-to-top-btn.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .back-to-top-btn:hover {
+        background: linear-gradient(90deg, var(--accent), var(--primary));
+        transform: translateY(-2px) scale(1.03);
+      }
+      @media (max-width: 480px) {
+        .back-to-top-btn {
+          right: 14px;
+          bottom: 14px;
+          padding: 10px 14px;
+          font-size: 1rem;
+        }
+      }
     </style>
 </head>
 <body>
@@ -227,9 +264,11 @@
     </form>
     <div id="newsletter-confirmation" style="display:none;font-size:1.08rem;color:var(--primary);margin-bottom:18px;">Thank you for subscribing!</div>
     &copy; 2024 Nexora. All rights reserved.
+    <button id="back-to-top-btn" class="back-to-top-btn" aria-label="Back to top" title="Back to top">↑ Top</button>
   </footer>
   <script src="scripts/newsletter.js"></script>
   <script src="scripts/theme.js"></script>
   <script src="scripts/get-started.js"></script>
+  <script src="scripts/back-to-top.js"></script>
 </body>
 </html>
