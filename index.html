@@ -172,6 +172,7 @@
         box-shadow: 0 2px 8px rgba(90,209,230,0.08);
         border-radius: 0 0 var(--radius) var(--radius);
         z-index: 100;
+        position: relative;
       }
       .announcement-bar a {
         color: inherit;
@@ -181,6 +182,27 @@
       }
       .announcement-bar a:hover {
         color: var(--accent);
+      }
+      .announcement-bar.hidden {
+        display: none;
+      }
+      .announcement-close-btn {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: inherit;
+        font-size: 1.2rem;
+        line-height: 1;
+        cursor: pointer;
+        padding: 4px 8px;
+        border-radius: 6px;
+        transition: background 0.15s;
+      }
+      .announcement-close-btn:hover {
+        background: rgba(0,0,0,0.1);
       }
       .back-to-top-btn {
         position: fixed;
@@ -227,8 +249,9 @@
       🌙
     </button>
   </header>
-  <div class="announcement-bar">
+  <div class="announcement-bar" id="announcement-bar">
     Check out what’s new in Nexora! <a href="/changelog" target="_blank" rel="noopener">See product updates</a>
+    <button id="announcement-close-btn" class="announcement-close-btn" aria-label="Dismiss announcement" title="Dismiss">&times;</button>
   </div>
   <section class="hero">
     <div class="hero-title">Nexora</div>
@@ -270,5 +293,6 @@
   <script src="scripts/theme.js"></script>
   <script src="scripts/get-started.js"></script>
   <script src="scripts/back-to-top.js"></script>
+  <script src="scripts/announcement-bar.js"></script>
 </body>
 </html>
