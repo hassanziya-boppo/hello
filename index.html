@@ -219,7 +219,41 @@
           font-size: 1rem;
         }
       }
-    </style>
+        .faq-section {
+        background: var(--bg);
+        padding: 48px 16px 32px 16px;
+      }
+      .faq-heading {
+        color: var(--primary);
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 32px;
+        letter-spacing: 1px;
+      }
+      .faq-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+      }
+      .faq-item {
+        margin-bottom: 0;
+      }
+      @media (max-width: 800px) {
+        .faq-list {
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
+        }
+        .faq-section {
+          padding: 32px 8px 24px 8px;
+        }
+        .faq-heading {
+          font-size: 1.4rem;
+        }
+      }
+  </style>
 </head>
 <body>
   <header style="width:100%;display:flex;justify-content:flex-end;align-items:center;padding:16px 24px 0 0;background:none;box-sizing:border-box;">
@@ -251,6 +285,27 @@
     <div class="feature">
       <div class="feature-title">Enterprise-ready Security</div>
       <div class="feature-desc">SSO, role-based access and audit logs as standard. Your data stays yours, with encryption in transit and at rest.</div>
+    </div>
+  </section>
+  <section class="faq-section">
+    <h2 class="faq-heading">Frequently asked questions</h2>
+    <div class="faq-list">
+      <div class="feature faq-item">
+        <div class="feature-title">What is Nexora?</div>
+        <div class="feature-desc">A productivity workspace that brings your tasks, notes and automations into one place.</div>
+      </div>
+      <div class="feature faq-item">
+        <div class="feature-title">Do I need a credit card to start?</div>
+        <div class="feature-desc">No. The free plan is available without any payment details.</div>
+      </div>
+      <div class="feature faq-item">
+        <div class="feature-title">Can I use Nexora with my team?</div>
+        <div class="feature-desc">Yes. Workspaces can be shared with any number of teammates.</div>
+      </div>
+      <div class="feature faq-item">
+        <div class="feature-title">How do I get support?</div>
+        <div class="feature-desc">Email support@nexora.example and we'll reply within one business day.</div>
+      </div>
     </div>
   </section>
   <footer>
