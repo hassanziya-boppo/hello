@@ -240,6 +240,64 @@
       .faq-item {
         margin-bottom: 0;
       }
+      .faq-question {
+        width: 100%;
+        background: none;
+        border: none;
+        color: inherit;
+        font: inherit;
+        text-align: left;
+        padding: 20px 24px 20px 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.13rem;
+        font-weight: 600;
+        border-radius: var(--radius);
+        transition: background 0.18s;
+        outline: none;
+      }
+      .faq-question:focus {
+        box-shadow: 0 0 0 2px var(--primary);
+        background: var(--bg-alt);
+      }
+      .faq-question .faq-chevron {
+        display: inline-block;
+        width: 1.2em;
+        height: 1.2em;
+        margin-left: 12px;
+        transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+        border-right: 2.5px solid var(--primary);
+        border-bottom: 2.5px solid var(--primary);
+        transform: rotate(45deg);
+        pointer-events: none;
+      }
+      .faq-question .faq-chevron.rotated {
+        transform: rotate(135deg);
+      }
+      .faq-answer {
+        background: var(--bg-alt);
+        color: var(--text-muted);
+        border-radius: 0 0 var(--radius) var(--radius);
+        margin-top: -2px;
+        padding: 0 20px 18px 20px;
+        font-size: 1.04rem;
+        line-height: 1.6;
+        box-shadow: none;
+        transition: background 0.18s;
+      }
+      .faq-item.open .faq-question {
+        background: var(--bg-alt);
+      }
+      .faq-item.open .faq-answer {
+        color: var(--text);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .faq-answer, .faq-question .faq-chevron {
+          transition: none !important;
+        }
+      }
       @media (max-width: 800px) {
         .faq-list {
           flex-direction: column;
@@ -476,5 +534,6 @@
   <script src="scripts/theme.js"></script>
   <script src="scripts/get-started.js"></script>
   <script src="scripts/back-to-top.js"></script>
+<script src="scripts/faq.js"></script>
 </body>
 </html>
